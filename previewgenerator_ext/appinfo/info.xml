@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>previewgenerator_ext</id>
+    <name>Preview Generator Extension</name>
+    <summary>Extension for the application Preview Generator.</summary>
+    <description><![CDATA[Preview Generator Extension contains a job extending the application Preview Generator which pre-generats media previews. No extra CRON job is needed for this job.]]></description>
+    <version>1.0.0</version>
+    <licence>agpl</licence>
+    <author mail="eli.nucknack@gmail.com" homepage="https://github.com/elinucknack">Eli Nucknack</author>
+    <namespace>PreviewGeneratorExt</namespace>
+    <category>tools</category>
+    <bugs>https://github.com/elinucknack</bugs>
+    <dependencies>
+        <nextcloud min-version="27" max-version="28"/>
+    </dependencies>
+    <background-jobs>
+        <job>OCA\PreviewGeneratorExt\BackgroundJob\PreGeneratePreviewsJob</job>
+    </background-jobs>
+</info>
